@@ -7,6 +7,7 @@ import 'antd/dist/antd.css'
 function App() {
 
   const [data, setData] = useState([]);
+  const [search, setSearch] = useState('');
   console.log(data);
 
   useEffect( () => {
@@ -22,7 +23,7 @@ function App() {
  return () => {
     isCancelled = true;
 }       
-},)
+},[search])
 
 
   return (
